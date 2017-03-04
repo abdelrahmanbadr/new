@@ -75,17 +75,3 @@ data=JSON.parse(data);
 
 });
 
-io.sockets.on('connection', function(socket){
-
-
-    
-   //socket.on take event name and the function to run it 
-    socket.on('ionic-laravel', function(msg,room,username) {
-
-      ///to run the event
-        io.emit('ionic-laravel', msg,room,username);
-       
-        
-    });
-
-});
