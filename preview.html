@@ -1,0 +1,14 @@
+<img src="" id='play'>
+
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+var socket=io();
+
+var play=document.getElementById("play");
+socket.on('stream',function(data){
+	play.src=data;
+
+});
+
+ </script>
